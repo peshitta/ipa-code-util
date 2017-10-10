@@ -67,7 +67,7 @@ export const veghadhkhefathConsonants = [
   'ð', // Dhālath - Voiced dental fricative
   'x', // Khāph - Voiceless velar fricative
   'f', // Fē - voiceless labiodental fricative
-  'θ' // // Thaw - Voiceless dental fricative
+  'θ' // Thaw - Voiceless dental fricative
 ];
 
 /**
