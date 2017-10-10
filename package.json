@@ -1,6 +1,6 @@
 {
   "name": "ipa-code-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IPA Unicode utilities",
   "main": "build/ipa-code-util.js",
   "mainMin": "build/ipa-code-util.min.js",

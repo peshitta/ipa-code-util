@@ -25,11 +25,13 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.0.tgz](https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.0.tgz)
+[https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.1.tgz](https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.1.tgz)
 
 ## More information
 
 [Peshitta App](https://peshitta.github.io)
+
+[IPA](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet)
 
 [Beth Mardutho](https://sedra.bethmardutho.org/about/fonts)
 
@@ -62,6 +64,7 @@ npm run build
 
 * [ipaCodeUtil](#module_ipaCodeUtil)
     * [.consonants](#module_ipaCodeUtil.consonants) : <code>Array.&lt;string&gt;</code>
+    * [.begadkepatConsonants](#module_ipaCodeUtil.begadkepatConsonants) : <code>Array.&lt;string&gt;</code>
     * [.veghadhkhefathConsonants](#module_ipaCodeUtil.veghadhkhefathConsonants) : <code>Array.&lt;string&gt;</code>
     * [.extraConsonants](#module_ipaCodeUtil.extraConsonants) : <code>Array.&lt;string&gt;</code>
     * [.allConsonants](#module_ipaCodeUtil.allConsonants) : <code>Array.&lt;string&gt;</code>
@@ -73,11 +76,19 @@ npm run build
     * [.isConsonant](#module_ipaCodeUtil.isConsonant) ⇒ <code>boolean</code>
     * [.isVowel](#module_ipaCodeUtil.isVowel) ⇒ <code>boolean</code>
     * [.removeVowels](#module_ipaCodeUtil.removeVowels) ⇒ <code>string</code>
+    * [.isBegadkepat](#module_ipaCodeUtil.isBegadkepat) ⇒ <code>boolean</code>
+    * [.isVeghadhkhefath](#module_ipaCodeUtil.isVeghadhkhefath) ⇒ <code>boolean</code>
 
 <a name="module_ipaCodeUtil.consonants"></a>
 
 ### ipaCodeUtil.consonants : <code>Array.&lt;string&gt;</code>
 Semitic 22 base consonants
+
+**Kind**: static constant of [<code>ipaCodeUtil</code>](#module_ipaCodeUtil)  
+<a name="module_ipaCodeUtil.begadkepatConsonants"></a>
+
+### ipaCodeUtil.begadkepatConsonants : <code>Array.&lt;string&gt;</code>
+Begadkepat consonants
 
 **Kind**: static constant of [<code>ipaCodeUtil</code>](#module_ipaCodeUtil)  
 <a name="module_ipaCodeUtil.veghadhkhefathConsonants"></a>
@@ -163,4 +174,28 @@ Remove vowels, leaving consonantal word only.
 | Param | Type | Description |
 | --- | --- | --- |
 | word | <code>string</code> | input word to be processed |
+
+<a name="module_ipaCodeUtil.isBegadkepat"></a>
+
+### ipaCodeUtil.isBegadkepat ⇒ <code>boolean</code>
+Returns true if c is a begadkepat consonant
+
+**Kind**: static constant of [<code>ipaCodeUtil</code>](#module_ipaCodeUtil)  
+**Returns**: <code>boolean</code> - true if c is a begadkepat consonant  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| c | <code>string</code> | input character |
+
+<a name="module_ipaCodeUtil.isVeghadhkhefath"></a>
+
+### ipaCodeUtil.isVeghadhkhefath ⇒ <code>boolean</code>
+Returns true if c is a veghadhkhefath consonant
+
+**Kind**: static constant of [<code>ipaCodeUtil</code>](#module_ipaCodeUtil)  
+**Returns**: <code>boolean</code> - true if c is a veghadhkhefath consonant  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| c | <code>string</code> | input character |
 

@@ -43,6 +43,20 @@ export const consonants = Object.freeze([
 ]);
 
 /**
+ * Begadkepat consonants
+ * @constant
+ * @type { string[] }
+ */
+export const begadkepatConsonants = [
+  'b', // Bēth - Voiced bilabial stop
+  'g', // Gāmal - Voiced velar stop
+  'd', // Dālath - Voiced alveolar stop
+  'k', // Kāph - Voiceless velar stop
+  'p', // Pē - Voiceless bilabial stop
+  't' // Taw - Voiceless alveolar stop
+];
+
+/**
  * Veghadhkhefath consonants
  * @constant
  * @type { string[] }
@@ -162,3 +176,17 @@ export const removeVowels = word => {
   }
   return hasVowels ? stack.join('') : word;
 };
+
+/**
+ * Returns true if c is a begadkepat consonant
+ * @param { string } c input character
+ * @returns { boolean } true if c is a begadkepat consonant
+ */
+export const isBegadkepat = c => begadkepatConsonants.indexOf(c) > -1;
+
+/**
+ * Returns true if c is a veghadhkhefath consonant
+ * @param { string } c input character
+ * @returns { boolean } true if c is a veghadhkhefath consonant
+ */
+export const isVeghadhkhefath = c => veghadhkhefathConsonants.indexOf(c) > -1;
