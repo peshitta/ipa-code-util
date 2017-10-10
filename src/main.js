@@ -71,6 +71,22 @@ export const veghadhkhefathConsonants = [
 ];
 
 /**
+ * Begadkepat to veghadhkhefath map
+ * @const
+ * @type { Object.<string, string> }
+ */
+export const begadkepatMap = Object.freeze(
+  Object.create(null, {
+    b: { value: 'v', enumerable: true },
+    g: { value: 'ɣ', enumerable: true },
+    d: { value: 'ð', enumerable: true },
+    k: { value: 'x', enumerable: true },
+    p: { value: 'f', enumerable: true },
+    t: { value: 'θ', enumerable: true }
+  })
+);
+
+/**
  * Other semitic consonants
  * @constant
  * @type { string[] }
