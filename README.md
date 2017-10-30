@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.2.tgz](https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.2.tgz)
+[https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.3.tgz](https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.3.tgz)
 
 ## More information
 
@@ -76,6 +76,7 @@ npm run build
     * [.silent](#module_ipaCodeUtil.silent) : <code>string</code>
     * [.isConsonant](#module_ipaCodeUtil.isConsonant) ⇒ <code>boolean</code>
     * [.isVowel](#module_ipaCodeUtil.isVowel) ⇒ <code>boolean</code>
+    * [.isDotted](#module_ipaCodeUtil.isDotted) ⇒ <code>boolean</code>
     * [.removeVowels](#module_ipaCodeUtil.removeVowels) ⇒ <code>string</code>
     * [.isBegadkepat](#module_ipaCodeUtil.isBegadkepat) ⇒ <code>boolean</code>
     * [.isVeghadhkhefath](#module_ipaCodeUtil.isVeghadhkhefath) ⇒ <code>boolean</code>
@@ -169,6 +170,18 @@ Is character c a semitic vowel
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
+
+<a name="module_ipaCodeUtil.isDotted"></a>
+
+### ipaCodeUtil.isDotted ⇒ <code>boolean</code>
+Return true if input word has vowels or diacritics
+
+**Kind**: static constant of [<code>ipaCodeUtil</code>](#module_ipaCodeUtil)  
+**Returns**: <code>boolean</code> - true if word has vowels or diacritics  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| word | <code>string</code> | input word |
 
 <a name="module_ipaCodeUtil.removeVowels"></a>
 

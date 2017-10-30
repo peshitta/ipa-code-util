@@ -1,4 +1,6 @@
 /** @module ipaCodeUtil */
+import { hasDotting, clearDotting } from 'aramaic-mapper';
+
 /**
  * Semitic 22 base consonants
  * @constant
@@ -171,27 +173,18 @@ export const isConsonant = c => allConsonants.indexOf(c) > -1;
 export const isVowel = c => allVowels.indexOf(c) > -1;
 
 /**
+ * Return true if input word has vowels or diacritics
+ * @param { string } word input word
+ * @returns { boolean } true if word has vowels or diacritics
+ */
+export const isDotted = hasDotting(isVowel);
+
+/**
  * Remove vowels, leaving consonantal word only.
  * @param { string } word input word to be processed
  * @returns { string } consonantal word
  */
-export const removeVowels = word => {
-  if (!word) {
-    return word;
-  }
-
-  let hasVowels = false;
-  const stack = [];
-  for (let i = 0, len = word.length; i < len; i++) {
-    const c = word.charAt(i);
-    if (isVowel(c)) {
-      hasVowels = true;
-    } else {
-      stack.push(c);
-    }
-  }
-  return hasVowels ? stack.join('') : word;
-};
+export const removeVowels = clearDotting(isVowel);
 
 /**
  * Returns true if c is a begadkepat consonant
