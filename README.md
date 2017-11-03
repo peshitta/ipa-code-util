@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.3.tgz](https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.3.tgz)
+[https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.4.tgz](https://registry.npmjs.org/ipa-code-util/-/ipa-code-util-1.0.4.tgz)
 
 ## More information
 
@@ -63,12 +63,14 @@ npm run build
 ## API Reference
 
 * [ipaCodeUtil](#module_ipaCodeUtil)
+    * [.consonantsByName](#module_ipaCodeUtil.consonantsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.consonants](#module_ipaCodeUtil.consonants) : <code>Array.&lt;string&gt;</code>
     * [.begadkepatConsonants](#module_ipaCodeUtil.begadkepatConsonants) : <code>Array.&lt;string&gt;</code>
     * [.veghadhkhefathConsonants](#module_ipaCodeUtil.veghadhkhefathConsonants) : <code>Array.&lt;string&gt;</code>
     * [.begadkepatMap](#module_ipaCodeUtil.begadkepatMap) : <code>Object.&lt;string, string&gt;</code>
     * [.extraConsonants](#module_ipaCodeUtil.extraConsonants) : <code>Array.&lt;string&gt;</code>
     * [.allConsonants](#module_ipaCodeUtil.allConsonants) : <code>Array.&lt;string&gt;</code>
+    * [.vowelsByName](#module_ipaCodeUtil.vowelsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.commonVowels](#module_ipaCodeUtil.commonVowels) : <code>Array.&lt;string&gt;</code>
     * [.easternVowels](#module_ipaCodeUtil.easternVowels) : <code>Array.&lt;string&gt;</code>
     * [.otherVowels](#module_ipaCodeUtil.otherVowels) : <code>Array.&lt;string&gt;</code>
@@ -81,6 +83,12 @@ npm run build
     * [.isBegadkepat](#module_ipaCodeUtil.isBegadkepat) ⇒ <code>boolean</code>
     * [.isVeghadhkhefath](#module_ipaCodeUtil.isVeghadhkhefath) ⇒ <code>boolean</code>
 
+<a name="module_ipaCodeUtil.consonantsByName"></a>
+
+### ipaCodeUtil.consonantsByName : <code>Object.&lt;string, string&gt;</code>
+IPA consonant name to value map
+
+**Kind**: static constant of [<code>ipaCodeUtil</code>](#module_ipaCodeUtil)  
 <a name="module_ipaCodeUtil.consonants"></a>
 
 ### ipaCodeUtil.consonants : <code>Array.&lt;string&gt;</code>
@@ -115,6 +123,12 @@ Other semitic consonants
 
 ### ipaCodeUtil.allConsonants : <code>Array.&lt;string&gt;</code>
 All consonants concatenated
+
+**Kind**: static constant of [<code>ipaCodeUtil</code>](#module_ipaCodeUtil)  
+<a name="module_ipaCodeUtil.vowelsByName"></a>
+
+### ipaCodeUtil.vowelsByName : <code>Object.&lt;string, string&gt;</code>
+IPA vowel name to value map
 
 **Kind**: static constant of [<code>ipaCodeUtil</code>](#module_ipaCodeUtil)  
 <a name="module_ipaCodeUtil.commonVowels"></a>

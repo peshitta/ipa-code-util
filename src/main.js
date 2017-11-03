@@ -2,46 +2,84 @@
 import { hasDotting, clearDotting } from 'aramaic-mapper';
 
 /**
+ * IPA consonant name to value map
+ * @constant
+ * @type { Object.<string, string> }
+*/
+export const consonantsByName = Object.freeze(
+  Object.create(null, {
+    alaph: { value: 'ʔ', enumerable: true },
+    beth: { value: 'b', enumerable: true },
+    gamal: { value: 'g', enumerable: true },
+    dalath: { value: 'd', enumerable: true },
+
+    he: { value: 'h', enumerable: true },
+    waw: { value: 'w', enumerable: true },
+    zayn: { value: 'z', enumerable: true },
+
+    heth: { value: 'ħ', enumerable: true },
+    teth: { value: 'ᵵ', enumerable: true },
+    yod: { value: 'j', enumerable: true },
+
+    kaph: { value: 'k', enumerable: true },
+    lamadh: { value: 'l', enumerable: true },
+    mim: { value: 'm', enumerable: true },
+    nun: { value: 'n', enumerable: true },
+
+    semkath: { value: 's', enumerable: true },
+    e: { value: 'ʕ', enumerable: true },
+    pe: { value: 'p', enumerable: true },
+    sadhe: { value: 'ᵴ', enumerable: true },
+
+    qoph: { value: 'q', enumerable: true },
+    resh: { value: 'r', enumerable: true },
+    shin: { value: 'ʃ', enumerable: true },
+    taw: { value: 't', enumerable: true }
+  })
+);
+
+const l = consonantsByName;
+/**
  * Semitic 22 base consonants
  * @constant
  * @type { string[] }
 */
 export const consonants = Object.freeze([
   // abgad
-  'ʔ', // Ālaph - Glottal Stop
-  'b', // Bēth - Voiced bilabial stop
-  'g', // Gāmal - Voiced velar stop
-  'd', // Dālath - Voiced alveolar stop
+  l.alaph, // 'ʔ', Ālaph - Glottal Stop
+  l.beth, // 'b', Bēth - Voiced bilabial stop
+  l.gamal, // 'g', Gāmal - Voiced velar stop
+  l.dalath, // 'd', Dālath - Voiced alveolar stop
 
   // hawaz
-  'h', // Hē - Voiceless glottal fricative
-  'w', // Waw - Voiced labio-velar approximant
-  'z', // Zain - Voiced alveolar fricative
+  l.he, // 'h', Hē - Voiceless glottal fricative
+  l.waw, // 'w', Waw - Voiced labio-velar approximant
+  l.zayn, // 'z', Zain - Voiced alveolar fricative
 
   // ḥaṭy
   // hi-jacking tilde ~ strike-through symbols to indicate pharyngealization,
   // velarization and uvularization to be indicated with diacritic chars instead
-  'ħ', // Ḥēth - Voiceless pharyngeal fricative
-  'ᵵ', // Ṭēth - Emphatic pharyngealized T
-  'j', // Yodh - Voiced palatal approximant
+  l.heth, // 'ħ', Ḥēth - Voiceless pharyngeal fricative
+  l.teth, // 'ᵵ', Ṭēth - Emphatic pharyngealized T
+  l.yod, // 'j', Yodh - Voiced palatal approximant
 
   // kalman
-  'k', // Kāph - Voiceless velar stop
-  'l', // Lāmadh - Alveolar lateral approximant
-  'm', // Mem - Bilabial nasal
-  'n', // Nun - Alveolar nasal
+  l.kaph, // 'k', Kāph - Voiceless velar stop
+  l.lamadh, // 'l', Lāmadh - Alveolar lateral approximant
+  l.mem, // 'm', Mem - Bilabial nasal
+  l.nun, // 'n', Nun - Alveolar nasal
 
   // saʿpac
-  's', // Semkath - Voiceless alveolar fricative
-  'ʕ', // ʿĒ - Voiced pharyngeal fricative
-  'p', // Pē - Voiceless bilabial stop
-  'ᵴ', // Ṣādhē - Emphatic pharyngealized S, ~ strike-through for pharyngealization
+  l.semkath, // 's', Semkath - Voiceless alveolar fricative
+  l.e, // 'ʕ', ʿĒ - Voiced pharyngeal fricative
+  l.pe, // 'p', Pē - Voiceless bilabial stop
+  l.sadhe, // 'ᵴ', Ṣādhē - Emphatic pharyngealized S, ~ strike-through for pharyngealization
 
   // qarshat
-  'q', // Qoph - Voiceless uvular stop
-  'r', // Rēsh - Alveolar trill
-  'ʃ', // Shin - Voiceless palato-alveolar sibilant
-  't' // Taw - Voiceless alveolar stop
+  l.qoph, // 'q', Qoph - Voiceless uvular stop
+  l.resh, // 'r', Rēsh - Alveolar trill
+  l.shin, // 'ʃ', Shin - Voiceless palato-alveolar sibilant
+  l.taw // 't', Taw - Voiceless alveolar stop
 ]);
 
 /**
@@ -50,12 +88,12 @@ export const consonants = Object.freeze([
  * @type { string[] }
  */
 export const begadkepatConsonants = [
-  'b', // Bēth - Voiced bilabial stop
-  'g', // Gāmal - Voiced velar stop
-  'd', // Dālath - Voiced alveolar stop
-  'k', // Kāph - Voiceless velar stop
-  'p', // Pē - Voiceless bilabial stop
-  't' // Taw - Voiceless alveolar stop
+  l.beth, // 'b', Bēth - Voiced bilabial stop
+  l.gamal, // 'g', Gāmal - Voiced velar stop
+  l.dalath, // 'd', Dālath - Voiced alveolar stop
+  l.kaph, // 'k', Kāph - Voiceless velar stop
+  l.pe, // 'p', Pē - Voiceless bilabial stop
+  l.taw // 't,' Taw - Voiceless alveolar stop
 ];
 
 /**
@@ -109,16 +147,35 @@ export const allConsonants = Object.freeze(
 );
 
 /**
+ * IPA vowel name to value map
+ * @constant
+ * @type { Object.<string, string> }
+*/
+export const vowelsByName = Object.freeze(
+  Object.create(null, {
+    pthaha: { value: 'a', enumerable: true },
+    zqapha: { value: 'ɑ', enumerable: true },
+    rbasa: { value: 'e', enumerable: true },
+    hbasa: { value: 'i', enumerable: true },
+    esasa: { value: 'u', enumerable: true },
+
+    zlama: { value: 'ɛ', enumerable: true },
+    rwaha: { value: 'o', enumerable: true }
+  })
+);
+
+const v = vowelsByName;
+/**
  * Common aramaic vowels
  * @constant
  * @type { string[] }
 */
 export const commonVowels = Object.freeze([
-  'a', // Pthāḥā - Open front unrounded vowel
-  'ɑ', // Zqāphā - Open back unrounded vowel
-  'e', // Zlāmā qašyā - Close-mid front unrounded vowel
-  'i', // Ḥḇāṣā - Close front unrounded vowel
-  'u' // Rvāṣā - Close back rounded vowel
+  v.pthaha, // 'a', Pthāḥā - Open front unrounded vowel
+  v.zqapha, // 'ɑ', Zqāphā - Open back unrounded vowel
+  v.rbasa, // 'e', Zlāmā qašyā - Close-mid front unrounded vowel
+  v.hbasa, // 'i', Ḥḇāṣā - Close front unrounded vowel
+  v.esasa // 'u' Rvāṣā - Close back rounded vowel
 ]);
 
 /**
@@ -127,8 +184,8 @@ export const commonVowels = Object.freeze([
  * @type { string[] }
 */
 export const easternVowels = Object.freeze([
-  'ɛ', // Zlāmā pšīqā - Open-mid front unrounded - short version of e
-  'o' // Rwāḥā - Close-mid back rounded vowel
+  v.zlama, // 'ɛ', Zlāmā pšīqā - Open-mid front unrounded - short version of e
+  v.rwaha // 'o' Rwāḥā - Close-mid back rounded vowel
 ]);
 
 /**
